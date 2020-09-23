@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <div id="main-heading-div">
-        <h1 >React - Spring - Library</h1>
+        <h1 >React - Spring - Playground</h1>
       </div>
       <Container componentToRender={<Fade />}></Container>
     </div>
