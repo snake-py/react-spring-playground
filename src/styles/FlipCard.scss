@@ -2,13 +2,24 @@
   width: 350px;
   margin: auto;
   display: flex;
-  position: relative;
+  align-items: center;
+  justify-content: center;
   .card-img {
-    position: absolut;
-    left: 50;
-    top: 50;
-    transform: translate(50, 50);
+    position: absolute;
+    width: 350px;
+    height: 200px;
+    cursor: pointer;
+    will-change: transform, opacity;
     border-radius: 0px 40px 0px 40px;
     box-shadow: 1px 1px 8px 0px rgba(50, 50, 50, 0.75);
+    background-size: cover;
   }
+}
+
+.card-back {
+  background-image: url(https://picsum.photos/350/200?random=1);
+}
+
+.card-front {
+  background-image: url(https://picsum.photos/350/200?random=3);
 }

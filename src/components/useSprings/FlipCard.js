@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useSpring, animated } from 'react-spring';
+import { useSpring, animated, interpolate } from 'react-spring';
 
 export default function FlipCard() {
   const [flipped, setFlip] = useState(false);
@@ -12,8 +12,8 @@ export default function FlipCard() {
   return (
     <div>
       <div onClick={() => setFlip((state) => !state)} className="FlipCard-container">
-        <animated.img style={{opacity: opacity.interpolate(o => 1-o), transform}} className="card-img" src="https://picsum.photos/350/200" />
-        <animated.img style={{opacity: opacity.interpolate(t => `${t} rotateX(180deg)`), transform}} className="card-img" src="https://picsum.photos/350/200" />
+        <animated.div style={{ opacity: opacity.interpolate((opacity) => 1 - opacity), transform }} className="card-img card-back" />
+        <animated.div style={{ transform:  transform.interpolate((t) => `${t} rotateX(180deg)`), opacity }} className="card-img card-front" />
       </div>
     </div>
   );
