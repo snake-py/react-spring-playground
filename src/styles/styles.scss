@@ -1,3 +1,9 @@
+$bgcolor: #f4f4f4;
+$orange: #ff7315;
+$grey: #3a3535;
+$black: #232020;
+
+@import './FlipCard.scss';
 * {
   margin: 0;
   padding: 0;
@@ -15,11 +21,12 @@ body {
 }
 
 .container {
-  margin: 0 40vw;
+  margin: 100px 35vw;
   .animation-container {
+    overflow: hidden;
     position: relative;
     border-radius: 50px;
-    background: #f4f4f4;
+    background: $bgcolor;
     box-shadow: 5px 5px 10px #cfcfcf, -5px -5px 10px #ffffff;
     min-height: 300px;
     .animation {
